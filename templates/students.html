@@ -1,0 +1,15 @@
+<html>
+<head>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{%  static 'design.css' %}"/>
+    <title>Students</title>
+</head>
+<body>
+<h1>Students</h1>
+<ul>
+{% for student in stude_list %}
+  <li>{{ student.first_name }},{{ student.last_name }},{{ student.email }}</li>
+{% endfor %}
+</ul>}
+</body>
+</html>  

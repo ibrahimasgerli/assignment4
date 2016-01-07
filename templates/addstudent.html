@@ -1,0 +1,23 @@
+<html>
+<head>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{%  static 'design.css' %}"/>
+    <title>Add Student</title>
+</head>
+<body>
+    <h1>Add Student</h1>
+	{% if form.error %}
+	    <p style="color: red;">
+		    Please correct the error{{ form.errors|pluralize }} below.
+		</p>
+	{% endif %}
+	
+	<form action="" method="post">
+	    {% csrf_token %}
+		<table>
+		    {{ form.as_table }}
+		</table>
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>	
